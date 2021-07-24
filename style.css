@@ -1,0 +1,470 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin|Herr+Von+Muellerhoff|Source+Sans+Pro:400,900&display=swap');
+
+/* global */
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-font: 'Source Sans Pro', sans-serif;
+    --secondary-font: 'Herr Von Muellerhoff', cursive;
+    --body-font: 'Cabin', sans-serif;
+    --main-font-color-dark: #252525;
+    --secondary-font-color: #c59d5f;
+    --body-font-color: #515151;
+    --white-color: #fff;
+    --main-font-size: 4rem;
+    --secondary-font-size: 8rem;
+}
+html{
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body{
+  font-size: 1.4rem;
+  font-family: var(--body-font);
+  /* height: 2000px; */
+}
+
+/* ######## global ########## */
+.title-secondary{
+  font-size: var(--secondary-font-size);
+  font-family: var(--secondary-font);
+  color: var(--secondary-font-color);
+  line-height: 0;
+}
+.title-main{
+  font-size: var(--main-font-size);
+  font-family: var(--main-font);
+  color: var(--white-color);
+  font-weight: 700;
+  letter-spacing: 7px;
+  line-height: 0;
+  text-transform: uppercase;
+}
+.title-link a{
+  color: var(--secondary-font-color);
+  text-transform: uppercase;
+  margin-top: 2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--secondary-font-color);
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+/* ########### end global ########## */
+
+/* ############# header ############ */
+.header{
+  background-image: url(./images/hero.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 5rem;
+}
+.nav-icon-menu{
+  opacity: 0;
+  visibility: hidden;
+}
+.navbar{
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+.navbar-menu li{
+  margin-left: 3rem;
+}
+.navbar-menu li a{
+  color: var(--white-color);
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+ 
+}
+
+.navbar-menu li a{
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+.navbar-menu li a::before{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--white-color);
+  transition: all linear 0.25s;
+  
+}
+.navbar-menu li a:hover::before{
+  width: 100%;
+}
+.header-content{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  /* transform: translateX(-50%, -100%); */
+  color: var(--white-color);
+  text-align: center;
+  
+}
+
+.header-content .header-title{
+  position: relative;
+  line-height: 1;
+   
+}
+.header-icon{
+  position: relative;
+  left: 0;
+  padding:0 0.5rem;
+  color: var(--white-color);
+  line-height: 0;
+  color: var(--secondary-font-color);
+ 
+}
+.header-title::before{
+  position: absolute;
+  content: "";
+  width: 8rem;
+  height: 2px;
+  left: 0;
+  bottom: -1.5rem;
+  transform: translateY(-50%);
+  background-color: var(--white-color);
+}
+.header-title::after{
+  position: absolute;
+  content: "";
+  width: 8rem;
+  height: 2px;
+  right: 0;
+  bottom: -1.5rem;
+  transform: translateY(-50%);
+  background-color: var(--white-color);
+}
+.header-desc{
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.4rem;
+}
+.header-btn{
+  border: 0;
+  background-color: var(--white-color);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: all linear 0.2s;
+  letter-spacing: 2px;
+}
+.header-btn:hover{
+  background-color: var(--secondary-font-color);
+  color: var(--white-color);
+
+}
+
+
+/* ######### discover ######### */
+.discover{
+  margin-bottom: 5rem;
+}
+.discover-image{
+  overflow: hidden;
+}
+.discover-image img:hover{
+  transform: scale(1.1);
+  transition: all linear 0.2s; 
+}
+.discover-content{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  align-items: center;
+  grid-column-gap: 10rem;
+}
+.discover-text{
+  text-align: center;
+}
+.discover-text .discover-title-main{
+  color: var(--main-font-color-dark);
+  /* margin-top: 2rem; */
+}
+.discover-icon{
+  margin-bottom: 2rem;
+  margin-top: 5rem;
+}
+.discover-desc{
+  margin-bottom: 3rem;
+}
+
+/* ######## banner ######### */
+.banner{
+  background-image: url(./images/tasteful-recipes.jpg);
+  height: 550px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  margin-bottom: 5rem;
+}
+.banner-2{
+  background-image: url(images/perfect-blend.jpg);
+}
+.banner-content{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  /* color: var(--white-color); */
+}
+.banner-title{
+  line-height: 1.5;
+}
+
+/* ########## menu ########## */
+.menu{
+  margin-bottom: 5rem;
+}
+.menu-content{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 5rem;
+  text-align: center;
+  align-items: center;
+}
+.menu-image{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 2rem;
+}
+.image_1{
+  overflow: hidden;
+}
+.image_1 img:hover{
+  transform: scale(1.1);
+  transition: all linear 0.22s; 
+}
+.menu-text .menu-title-main{
+  color: var(--main-font-color-dark);
+  /* line-height: 1; */
+  margin-bottom: 5rem;
+}
+.menu-title-second{
+  line-height: 0.7;
+}
+.menu-icon{
+  margin-bottom: 2rem;
+}
+
+/* ######### delight ######### */
+.delight{
+  margin-bottom: 5rem;
+}
+.delight-content{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 5rem;
+  text-align: center;
+  align-items: center;
+}
+.delight-image{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 2rem;
+}
+.delight-text .delight-title-main{
+  color: var(--main-font-color-dark);
+  /* line-height: 1; */
+  margin-bottom: 5rem;
+}
+.delight-title-second{
+  line-height: 0.7;
+}
+.delight-icon{
+  margin-bottom: 2rem;
+}
+
+/* ############# footer ############ */
+
+.footer{
+  background-color: var(--main-font-color-dark);
+  height: auto;
+  color: var(--white-color);
+  position: relative;
+}
+.footer-location{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.footer-location span{
+  display: block;
+}
+.location{
+  padding-top: 5rem;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+.column--2{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+.column--1{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+.copy-right{
+  margin-top: 10rem;
+  color: var(--body-font-color);
+}
+.circle{
+  position: absolute;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  align-items: center;
+  color: #333;
+  background-color: var(--white-color);
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+  margin-left: 1.5rem;
+}
+.circle ion-icon{
+  font-size: 2rem;
+}
+.circle a{
+  text-decoration: none;
+  color: var(--main-font-color-dark);
+}
+
+
+
+
+ /* ########## responsive ########### */
+
+@media screen and (max-width:800px) {
+  .navbar{
+    justify-content: center;
+  }
+  .nav-logo{
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  .navbar-menu{
+    position: fixed;
+    top: 0;
+    display: block;
+    width: 106%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.74);
+    z-index: 1000;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5rem;
+    transition: all linear 0.25s;
+  }
+  
+  .header-menu li a{
+    position: relative;
+    
+    
+  }
+  .nav-icon-menu{
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    color: var(--white-color);
+    font-size: 3rem;
+    opacity: 1;
+    visibility: visible;
+    z-index: 100000;
+  }
+  .active{
+    width: 0;
+  }
+  .header-content{
+    width: 100%;
+    text-align: center;
+  }
+  .header-icon{
+    left: 0;
+    
+  }
+  .header-title::before{
+    width: 45%;
+  }
+  .header-title::after{
+    width: 45%;
+  }
+  
+}
+@media screen and (max-width:800px) {
+  .discover-content{
+    grid-template-columns: repeat(1,1fr);
+
+  }
+  .discover-text .discover{
+    
+    margin-top: 5rem;
+  }
+  .discover-text .discover-title-main{
+    margin-bottom: 5rem;
+    margin-top: 3rem;
+  }
+  .discover-icon{
+    margin-top: 0;
+  }
+  .discover-title-link {
+    margin-bottom: 3rem;
+  }
+}
+@media screen and (max-width:800px){
+  .menu-content{
+    grid-template-columns: repeat(1,1fr);
+  }
+}
+@media screen and (max-width:800px){
+  .delight-content{
+    grid-template-columns: repeat(1,1fr);
+  }
+}
+@media screen and (max-width:800px){
+  .footer-location{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .column--2{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 2rem;
+  }
+}
