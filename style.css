@@ -371,7 +371,7 @@ body{
 
  /* ########## responsive ########### */
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:900px) {
   .navbar{
     justify-content: center;
   }
@@ -383,7 +383,7 @@ body{
     position: fixed;
     top: 0;
     display: block;
-    width: 106%;
+    width: 100%;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.74);
     z-index: 1000;
@@ -428,7 +428,7 @@ body{
   }
   
 }
-@media screen and (max-width:800px) {
+@media screen and (max-width:900px) {
   .discover-content{
     grid-template-columns: repeat(1,1fr);
 
@@ -448,17 +448,17 @@ body{
     margin-bottom: 3rem;
   }
 }
-@media screen and (max-width:800px){
+@media screen and (max-width:900px){
   .menu-content{
     grid-template-columns: repeat(1,1fr);
   }
 }
-@media screen and (max-width:800px){
+@media screen and (max-width:900px){
   .delight-content{
     grid-template-columns: repeat(1,1fr);
   }
 }
-@media screen and (max-width:800px){
+@media screen and (max-width:900px){
   .footer-location{
     grid-template-columns: repeat(1, 1fr);
   }
